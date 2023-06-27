@@ -50,7 +50,7 @@ describe("tests/e2e/pasien.spec.js", () => {
         });
 
         //field masih ada kosong
-        it("should return error nomor_registrasi validation when nama_pasien not filled'", async () => {
+        it("should return error nama_pasien validation when nama_pasien not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
@@ -65,7 +65,7 @@ describe("tests/e2e/pasien.spec.js", () => {
             expect(posts.status).toBe(400);
             expect(posts.body.message).toBe("nama_pasien harus diisi");
         });
-        it("should return error nama_dokter validation when umur not filled'", async () => {
+        it("should return error umur validation when umur not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
@@ -80,7 +80,7 @@ describe("tests/e2e/pasien.spec.js", () => {
             expect(posts.statusCode).toBe(400);
             expect(posts.body.message).toBe("umur harus diisi");
         });
-        it("should return error nama_dokter validation when jenis_kelamin not filled'", async () => {
+        it("should return error jenis_kelamin validation when jenis_kelamin not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
@@ -95,7 +95,7 @@ describe("tests/e2e/pasien.spec.js", () => {
             expect(posts.statusCode).toBe(400);
             expect(posts.body.message).toBe("jenis_kelamin harus diisi");
         });
-        it("should return error nama_dokter validation when berat_badan not filled'", async () => {
+        it("should return error berat_badan validation when berat_badan not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
@@ -110,7 +110,7 @@ describe("tests/e2e/pasien.spec.js", () => {
             expect(posts.statusCode).toBe(400);
             expect(posts.body.message).toBe("berat_badan harus diisi");
         });
-        it("should return error nama_dokter validation when tinggi_badan not filled'", async () => {
+        it("should return error tinggi_badan validation when tinggi_badan not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
@@ -125,7 +125,7 @@ describe("tests/e2e/pasien.spec.js", () => {
             expect(posts.statusCode).toBe(400);
             expect(posts.body.message).toBe("tinggi_badan harus diisi");
         });
-        it("should return error nama_dokter validation when alamat not filled'", async () => {
+        it("should return error alamat validation when alamat not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
@@ -140,7 +140,7 @@ describe("tests/e2e/pasien.spec.js", () => {
             expect(posts.statusCode).toBe(400);
             expect(posts.body.message).toBe("alamat harus diisi");
         });
-        it("should return error nama_dokter validation when nomor_telepon not filled'", async () => {
+        it("should return error nomor_telepon validation when nomor_telepon not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
@@ -155,7 +155,7 @@ describe("tests/e2e/pasien.spec.js", () => {
             expect(posts.statusCode).toBe(400);
             expect(posts.body.message).toBe("nomor_telepon harus diisi");
         });
-        it("should return error nama_dokter validation when asuransi not filled'", async () => {
+        it("should return error asuransi validation when asuransi not filled'", async () => {
             const posts = await supertest(app)
             .post("/pasien")
             .send({
