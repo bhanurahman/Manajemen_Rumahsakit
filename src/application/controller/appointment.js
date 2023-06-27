@@ -29,4 +29,3 @@ const {
     addPosts,
     getOnePost,
   };
-  
